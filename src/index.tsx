@@ -4,10 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// context
+import { SettingsProvider } from 'context/SettingsContext';
+
+// utils
+import { restoreSettings } from 'utils/settings';
+
+const settings = restoreSettings();
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <SettingsProvider settings={settings}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </SettingsProvider>,
   document.getElementById('root')
 );
 
