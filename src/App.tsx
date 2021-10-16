@@ -5,6 +5,7 @@ import { createStyles } from '@mui/styles';
 import { jssPreset, StylesProvider, makeStyles } from '@mui/styles';
 import { create } from 'jss';
 import rtl from 'jss-rtl';
+import Layout from 'components/layout/index';
 
 // assets
 import { createTheme } from 'assets/theme';
@@ -30,11 +31,13 @@ const App: React.FC = () => {
       <StylesProvider jss={jss}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/saved" component={SavedSnippets} />
-            <Route exact path="/404" component={NotFound} />
+            <Layout>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/saved" component={SavedSnippets} />
+              <Route exact path="/404" component={NotFound} />
+            </Layout>
           </Switch>
         </BrowserRouter>
       </StylesProvider>

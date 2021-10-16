@@ -20,7 +20,7 @@ const defaultSettings = {
   theme: THEMES.LIGHT,
 };
 
-const SettingsContext = createContext<SettingsContextInterface>(undefined);
+const SettingsContext = createContext<SettingsContextInterface>(null);
 
 export const SettingsProvider = ({ settings, children }) => {
   const [currentSettings, setCurrentSettings] = useState(
