@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme: any) => ({
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden',
-    padding: theme.spacing(2),
   },
   content: {
     flex: '1 1 auto',
