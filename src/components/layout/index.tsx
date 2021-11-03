@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@mui/styles';
 import Header from './Header';
@@ -21,7 +20,7 @@ const Layout = ({ children }) => {
 
 const useStyles = makeStyles((theme: any) => ({
   root: {
-    backgroundColor: theme.palette.background.dark,
+    backgroundColor: theme.palette.background.light,
     display: 'flex',
     height: '100%',
     overflow: 'hidden',
@@ -32,14 +31,12 @@ const useStyles = makeStyles((theme: any) => ({
     flex: '1 1 auto',
     overflow: 'hidden',
     paddingTop: 64,
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: 256,
-    },
   },
   contentContainer: {
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden',
+    padding: theme.spacing(2),
   },
   content: {
     flex: '1 1 auto',

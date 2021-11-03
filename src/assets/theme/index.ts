@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 /* eslint-disable import/prefer-default-export */
-
 import _ from 'lodash';
 import { colors, responsiveFontSizes } from '@mui/material';
 import { createTheme as createMuiTheme } from '@mui/material/styles';
@@ -48,17 +47,19 @@ const themeConfigs = [
       type: 'light',
       action: {
         active: colors.blueGrey[600],
+        focus: 'rgba(151, 151, 146, 0.4)',
       },
       background: {
         default: colors.common.white,
         dark: '#f4f6f8',
-        paper: colors.common.white,
+        light: colors.common.white,
+        paper: '#f3f6f9',
       },
       primary: {
-        main: colors.indigo[600],
+        main: '#009ca1',
       },
       secondary: {
-        main: '#5850EC',
+        main: '#ba68c8',
       },
       text: {
         primary: colors.blueGrey[900],
@@ -80,15 +81,16 @@ const themeConfigs = [
         focus: 'rgba(255, 255, 255, 0.12)',
       },
       background: {
-        default: '#282C34',
-        dark: '#1c2025',
-        paper: '#282C34',
+        default: '#071b2e',
+        light: '#001e3c',
+        dark: '#0a192a',
+        paper: '#122f4c',
       },
       primary: {
-        main: '#8a85ff',
+        main: '#007fff',
       },
       secondary: {
-        main: '#8a85ff',
+        main: '#0f5c2e',
       },
       text: {
         primary: '#e6e5e8',
